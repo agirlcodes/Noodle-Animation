@@ -39,69 +39,50 @@ body{
         position: relative;
         animation: steamLeft 6s ease-out 1.5s infinite;
     }
-    #reset{
-        #noodleBallOne{
-                animation: noodleDropIn 1.9s ease-out 1;
-                @include noodles;
-                z-index: 3;
-                left: 25%;
-                #detailOne{
-                    @include noodleDetail;
-                    top: 2.5px;
-                    left: 1px;
-                    width: 3.7em; 
-                    height: 4em;
-                }
-                #detailTwo{
-                    @include noodleDetail;
-                    top: 8px;
-                    left: 6px;
-                    width: 3em; 
-                    height: 3em;  
-                }
-                #detailThree{
-                    @include noodleDetail;
-                    top: 14px;
-                    left: 11.5px;
-                    width: 2.3em; 
-                    height: 2.3em;  
-                }
-                #detailFour{
-                    @include noodleDetail;
-                    top: 20px;
-                    left: 18px;
-                    width: 1.5em; 
-                    height: 1.5em;  
-
-                }
-        }
-
-        #noodleBallTwo{
+    #noodleBallOne{
             animation: noodleDropIn 1.9s ease-out 1;
-                @include noodles;
-                #detailOne{
-                    @include noodleDetail;
-                    top: 18px;
-                    left: 15px;
-                    width: 2em; 
-                    height: 2em;  
-                }
-                #detailTwo{
-                    @include noodleDetail;
-                    top: 9px;
-                    left: 7px;
-                    width: 3em; 
-                    height: 3em;  
-                }
-                #detailThree{
-                    @include noodleDetail;
-                    top: 1px;
-                    left: 1px;
-                    width: 3.7em; 
-                    height: 4em;  
-                }
-        }
+            @include noodles;
+            z-index: 3;
+            left: 25%;
     }
+            #noodleBallOne::before{
+                content: '';
+                @include noodleDetail;
+                top: 4px;
+                left: 1px;
+                width: 3.7em; 
+                height: 4em;
+            }
+            #noodleBallOne::after{
+                content: '';
+                @include noodleDetail;
+                top: 14px;
+                left: 6px;
+                width: 3em; 
+                height: 3em;  
+            }
+    #noodleBallTwo{
+        animation: noodleDropIn 1.9s ease-out 1;
+            @include noodles;
+    }       
+            #noodleBallTwo::before{
+                content: '';
+                @include noodleDetail;
+                top: 18px;
+                left: 15px;
+                width: 2em; 
+                height: 2em;  
+            }
+            #noodleBallTwo::after{
+                content: '';
+                @include noodleDetail;
+                top: 9px;
+                left: 7px;
+                width: 3em; 
+                height: 3em;  
+            }
+
+        }
     #chopstickOne{
         @include chopstickDesign;
         animation: chopstickDropIn 0.9s linear 1;
@@ -128,7 +109,7 @@ body{
             hsl(231, 37%, 44%) 20px
         );
     }
-}
+
 //chopstick animation
 @keyframes chopstickDropIn{
     0%{
@@ -144,8 +125,7 @@ body{
         transform: rotate(335deg);
     }
 }
-
-//starting noodle animation
+//noodle animation
 @keyframes noodleDropIn{
     0%{
         transform:translateY(-300px) scaleY(2) scaleX(0.5);

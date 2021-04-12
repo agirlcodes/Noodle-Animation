@@ -29,12 +29,12 @@
     border: 2px solid rgb(82, 46, 6);
     background-color: rgb(248, 211, 48);
     z-index: 2;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 @mixin noodleDetail{
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     border: solid 2px rgb(138, 128, 96);
     border-color:   rgb(82, 46, 6);
     border-radius: 50%;
